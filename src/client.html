@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Basic search</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.4.5/themes/satellite-min.css" integrity="sha256-TehzF/2QvNKhGQrrNpoOb2Ck4iGZ1J/DI4pkd2oUsBc=" crossorigin="anonymous">
+    <link rel="stylesheet" href="client.css" />
+  </head>
+
+  <body>
+    <div class="ais-InstantSearch">
+
+      <div class="left-panel">
+        <div id="clear-refinements"></div>
+    
+        <h5>CATEGORY</h5>
+        <div id="category-list"></div>
+    
+        <h5>BRAND</h5>
+        <div id="brand-list"></div>
+    
+        <h5>RATING</h5>
+        <div id="rating-list"></div>
+    
+        <h5>PRICE</h5>
+        <div id="price-slider"></div>
+    
+        <h5>TYPE</h5>
+        <div id="type-list"></div>
+    
+        <h5>SHIPPING</h5>
+        <div id="shipping-checkbox"></div>
+      </div>
+    
+      <div class="right-panel">
+        <div id="searchbox"></div>
+        <div id="hits"></div>
+        <div id="pagination"></div>
+      </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.5.1/dist/algoliasearch-lite.umd.js" integrity="sha256-EXPXz4W6pQgfYY3yTpnDa3OH8/EPn16ciVsPQ/ypsjk=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.8.3/dist/instantsearch.production.min.js" integrity="sha256-LAGhRRdtVoD6RLo2qDQsU2mp+XVSciKRC8XPOBWmofM=" crossorigin="anonymous"></script>
+    <script src="client.js"></script>
+  </body>
+</html>
