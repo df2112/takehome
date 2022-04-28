@@ -2,6 +2,13 @@ body {
   font-family: sans-serif;
   padding: 1em;
 }
+.left-panel {
+  float: left;
+  width: 250px;
+}
+.right-panel {
+  margin-left: 260px;
+}
 .ais-SearchBox {
   margin: 1em 0;
 }
@@ -13,16 +20,3 @@ body {
 .ais-Pagination {
   margin-top: 1em;
 }
-.left-panel {
-  float: left;
-  width: 250px;
-}
-.right-panel {
-  margin-left: 260px;
-}
-
-/* em {
-  background-color: #dfe2ee;
-  font-weight: 700;
-  font-style: normal;
-} */
