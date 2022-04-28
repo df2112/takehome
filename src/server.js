@@ -50,10 +50,10 @@ async function setRelevance() {
         "free_shipping",
         "hierarchicalCategories",
         "price",
+        "rating",
         "type",
       ],
-      numericAttributesForFiltering: ["price"], // Use rangeslider???
-      // TODO: filtering???
+      numericAttributesForFiltering: ["price"], 
     });
   } catch (err) {
     console.log(err.message);

@@ -13,26 +13,38 @@ search.addWidgets([
     placeholder: "Search for products by name, type, brand ...",
   }),
 
+  instantsearch.widgets.stats({
+    container: "#stats",
+  }),
+
   instantsearch.widgets.hits({
     container: "#hits",
     templates: {
       item: (data) => `
           <div>
             <img src="${data.image}" align="left" alt="${data.name}" />
+
             <div class="hit-name">
               <h4>${data._highlightResult.name.value}</h4>
+              <div class="hit-price">
+                $${data.price}
+              </div>
             </div>
+            
             <div class="hit-description">
-              <h4>${data._highlightResult.description.value}</h4>
+              <p>${data._highlightResult.description.value}</p>
             </div>
-            <div class="hit-price">
-              $${data.price}
-            </div>
-            <p>${data.description}</p>
           </div>
         `,
       empty: "<h5>No results ... please consider another query</h5>",
     },
+  }),
+
+  //
+  // Clear Refinements
+  //
+  instantsearch.widgets.clearRefinements({
+    container: "#clear-all",
   }),
 
   //
@@ -66,6 +78,18 @@ search.addWidgets([
   }),
 
   //
+  // Rating Menu - Rating
+  //
+  instantsearch.widgets.panel({
+    templates: {
+      header: "Rating",
+    },
+  })(instantsearch.widgets.ratingMenu)({
+    container: "#ratings",
+    attribute: "rating",
+  }),
+
+  //
   // Range Slider - Price
   //
   instantsearch.widgets.panel({
@@ -74,9 +98,36 @@ search.addWidgets([
     },
   })(instantsearch.widgets.rangeSlider)({
     container: "#price",
-    attribute: "price"
+    attribute: "price",
   }),
 
+  //
+  // Menu - (Product) Type
+  //
+  instantsearch.widgets.panel({
+    templates: {
+      header: "Type",
+    },
+  })(instantsearch.widgets.menu)({
+    container: "#types",
+    attribute: "type",
+  }),
+
+  //
+  // Toggle - Shipping
+  //
+  instantsearch.widgets.panel({
+    templates: {
+      header: "Shipping",
+    },
+  })(instantsearch.widgets.toggleRefinement)({
+    container: "#shipping",
+    attribute: "free_shipping",
+  }),
+
+  //
+  // Pagination
+  //
   instantsearch.widgets.pagination({
     container: "#pagination",
   }),

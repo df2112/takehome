@@ -1,13 +1,18 @@
 body {
-  font-family: sans-serif;
-  padding: 1em;
+  font-family: 'Helvetica Neue', Helvetica, sans-serif;
 }
 .left-panel {
   float: left;
-  width: 250px;
+  width: 23%;
 }
 .right-panel {
-  margin-left: 260px;
+  width: 74%;
+  margin-left: 26%;
+}
+.filter-widgets {
+  margin-bottom: 24px;
+  font-size: 14px;
+  color: #000;
 }
 .ais-SearchBox {
   margin: 1em 0;
