@@ -73,8 +73,11 @@ search.addWidgets([
   })(instantsearch.widgets.refinementList)({
     container: "#brands",
     attribute: "brand",
+    limit: 5,
     searchable: true,
     searchablePlaceholder: "Search for brands",
+    showMore: true,
+    showMoreLimit: 10
   }),
 
   //
